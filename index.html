@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>KeyVault AI</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- LOCK SCREEN -->
+
+  <div id="lockScreen" class="lock-screen">
+
+    <div class="lock-card">
+
+      <div class="lock-icon">🔐</div>
+
+      <h1>
+        KeyVault <span>AI</span>
+      </h1>
+
+      <p>Your secure API key vault</p>
+
+      <div class="status">
+        🔴 VAULT LOCKED
+      </div>
+
+      <label>Enter PIN</label>
+
+      <input
+        id="pinInput"
+        type="password"
+        inputmode="numeric"
+        maxlength="4"
+        placeholder="••••"
+      >
+
+      <div id="error"></div>
+
+      <button id="unlockButton">
+        🔓 Unlock Vault
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- MAIN APP -->
+
+  <div id="mainApp">
+
+    <header class="top-bar">
+
+      <div class="brand">
+
+        <div class="brand-icon">
+          🔐
+        </div>
+
+        <div>
+          <h2>KeyVault <span>AI</span></h2>
+          <small>API KEY MANAGER</small>
+        </div>
+
+      </div>
+
+      <button class="lock-button">
+        🔒
+      </button>
+
+    </header>
+
+
+    <section class="welcome">
+
+      <p class="small-text">
+        SECURE DASHBOARD
+      </p>
+
+      <h1>Welcome back 👋</h1>
+
+      <p>
+        Manage your API keys and developer credentials.
+      </p>
+
+    </section>
+
+
+    <!-- STATS -->
+
+    <section class="stats">
+
+      <div class="stat-card">
+
+        <div class="stat-icon purple">
+          🔑
+        </div>
+
+        <div>
+          <span>API KEYS</span>
+          <strong>0</strong>
+          <small>Stored keys</small>
+        </div>
+
+      </div>
+
+
+      <div class="stat-card">
+
+        <div class="stat-icon green">
+          💵
+        </div>
+
+        <div>
+          <span>BALANCE</span>
+          <strong>$0.00</strong>
+          <small>Available credits</small>
+        </div>
+
+      </div>
+
+
+      <div class="stat-card">
+
+        <div class="stat-icon blue">
+          📊
+        </div>
+
+        <div>
+          <span>USAGE</span>
+          <strong>0%</strong>
+          <small>This month</small>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- QUICK ACTIONS -->
+
+    <section>
+
+      <div class="section-title">
+
+        <h2>Quick Actions</h2>
+
+        <p>Manage your vault</p>
+
+      </div>
+
+
+      <div class="actions">
+
+        <button class="action-card">
+          ➕ Add API Key
+        </button>
+
+        <button class="action-card">
+          🔍 Search Keys
+        </button>
+
+        <button class="action-card">
+          💰 Balance
+        </button>
+
+        <button class="action-card">
+          ⚙️ Settings
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- MY KEYS -->
+
+    <section class="keys-section">
+
+      <div class="section-title">
+
+        <h2>My API Keys</h2>
+
+        <p>Your stored credentials</p>
+
+      </div>
+
+
+      <div class="empty-vault">
+
+        <div class="empty-icon">
+          🔑
+        </div>
+
+        <h2>Your vault is empty</h2>
+
+        <p>
+          Add your first API key to start managing
+          your developer credentials.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- BOTTOM NAVIGATION -->
+
+    <nav class="bottom-nav">
+
+      <button class="nav-item active">
+        🏠
+        <small>Home</small>
+      </button>
+
+      <button class="nav-item">
+        🔑
+        <small>Keys</small>
+      </button>
+
+      <button class="nav-item">
+        💰
+        <small>Balance</small>
+      </button>
+
+      <button class="nav-item">
+        ⚙️
+        <small>Settings</small>
+      </button>
+
+    </nav>
+
+  </div>
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
