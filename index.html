@@ -4,9 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>KeyVault AI</title>
-
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -20,9 +18,7 @@
 
       <div class="lock-icon">🔐</div>
 
-      <h1>
-        KeyVault <span>AI</span>
-      </h1>
+      <h1>KeyVault <span>AI</span></h1>
 
       <p>Your secure API key vault</p>
 
@@ -98,13 +94,11 @@
 
       <div class="stat-card">
 
-        <div class="stat-icon purple">
-          🔑
-        </div>
+        <div class="stat-icon purple">🔑</div>
 
         <div>
           <span>API KEYS</span>
-          <strong>0</strong>
+          <strong id="keyCount">0</strong>
           <small>Stored keys</small>
         </div>
 
@@ -113,9 +107,7 @@
 
       <div class="stat-card">
 
-        <div class="stat-icon green">
-          💵
-        </div>
+        <div class="stat-icon green">💵</div>
 
         <div>
           <span>BALANCE</span>
@@ -128,9 +120,7 @@
 
       <div class="stat-card">
 
-        <div class="stat-icon blue">
-          📊
-        </div>
+        <div class="stat-icon blue">📊</div>
 
         <div>
           <span>USAGE</span>
@@ -158,25 +148,96 @@
 
       <div class="actions">
 
-        <button class="action-card">
+        <button
+          class="action-card"
+          id="addKeyButton"
+        >
           ➕ Add API Key
         </button>
 
-        <button class="action-card">
+        <button
+          class="action-card"
+          id="searchButton"
+        >
           🔍 Search Keys
         </button>
 
-        <button class="action-card">
+        <button
+          class="action-card"
+          id="balanceButton"
+        >
           💰 Balance
         </button>
 
-        <button class="action-card">
+        <button
+          class="action-card"
+          id="settingsButton"
+        >
           ⚙️ Settings
         </button>
 
       </div>
 
     </section>
+
+
+    <!-- ADD KEY PANEL -->
+
+    <section
+      id="addKeyPanel"
+      class="add-panel"
+    >
+
+      <div class="section-title">
+
+        <h2>🔑 Add API Key</h2>
+
+        <p>Store a developer credential</p>
+
+      </div>
+
+
+      <input
+        id="providerInput"
+        type="text"
+        placeholder="Provider e.g. OpenAI"
+      >
+
+
+      <input
+        id="keyNameInput"
+        type="text"
+        placeholder="Key name"
+      >
+
+
+      <input
+        id="apiKeyInput"
+        type="password"
+        placeholder="Paste API key"
+      >
+
+
+      <button id="saveKeyButton">
+        💾 Save Key
+      </button>
+
+
+      <button id="cancelKeyButton">
+        Cancel
+      </button>
+
+    </section>
+
+
+    <!-- SEARCH -->
+
+    <input
+      id="searchInput"
+      class="search-box"
+      type="text"
+      placeholder="🔍 Search your keys..."
+    >
 
 
     <!-- MY KEYS -->
@@ -192,25 +253,14 @@
       </div>
 
 
-      <div class="empty-vault">
-
-        <div class="empty-icon">
-          🔑
-        </div>
-
-        <h2>Your vault is empty</h2>
-
-        <p>
-          Add your first API key to start managing
-          your developer credentials.
-        </p>
+      <div id="keysContainer">
 
       </div>
 
     </section>
 
 
-    <!-- BOTTOM NAVIGATION -->
+    <!-- BOTTOM NAV -->
 
     <nav class="bottom-nav">
 
