@@ -98,29 +98,21 @@ label {
   color: #bfc5d8;
 }
 
-input {
 
+input {
   width: 100%;
   height: 58px;
-
   padding: 15px;
-
   border-radius: 15px;
-
   border: 1px solid #30364d;
-
   background: #111525;
-
   color: white;
-
   outline: none;
-
   font-size: 24px;
-
   text-align: center;
-
   letter-spacing: 8px;
-}
+  touch-action: manipulation;
+}  
 
 #error {
 
@@ -397,6 +389,8 @@ input {
   font-size: 14px;
 
   cursor: pointer;
+    touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 
