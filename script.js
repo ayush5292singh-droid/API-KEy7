@@ -1,6 +1,5 @@
 const PIN = "7890";
 
-
 document.addEventListener("DOMContentLoaded", function () {
 
   const pinInput = document.getElementById("pinInput");
@@ -14,12 +13,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-
-  /* LOCK BUTTON */
+  /* LOCK */
 
   document
     .querySelector(".lock-button")
-    .addEventListener("click", lockVault);
+    .addEventListener("click", function () {
+      lockVault();
+    });
 
 
   /* QUICK ACTIONS */
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   actions[0].addEventListener("click", function () {
-    alert("➕ Add API Key\n\nThe API Key Vault will be added in Part 3.");
+    showMessage("➕ Add API Key", "Coming in Part 3.");
   });
 
 
@@ -37,18 +37,19 @@ document.addEventListener("DOMContentLoaded", function () {
     document
       .querySelector(".keys-section")
       .scrollIntoView({
-        behavior: "smooth"
+        behavior: "smooth",
+        block: "start"
       });
   });
 
 
   actions[2].addEventListener("click", function () {
-    alert("💰 Balance\n\nBalance and API usage will be added later.");
+    showMessage("💰 Balance", "Coming soon.");
   });
 
 
   actions[3].addEventListener("click", function () {
-    alert("⚙️ Settings\n\nSettings will be added later.");
+    showMessage("⚙️ Settings", "Coming soon.");
   });
 
 
@@ -76,20 +77,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   nav[2].addEventListener("click", function () {
-    alert("💰 Balance will be added later.");
+    showMessage("💰 Balance", "Coming soon.");
   });
 
 
   nav[3].addEventListener("click", function () {
-    alert("⚙️ Settings will be added later.");
+    showMessage("⚙️ Settings", "Coming soon.");
   });
 
 });
 
 
-/* =========================
-   UNLOCK
-========================= */
+/* UNLOCK */
 
 function unlock() {
 
@@ -98,6 +97,7 @@ function unlock() {
 
   const error =
     document.getElementById("error");
+
 
   if (input.value === PIN) {
 
@@ -123,9 +123,7 @@ function unlock() {
 }
 
 
-/* =========================
-   LOCK
-========================= */
+/* LOCK */
 
 function lockVault() {
 
@@ -144,5 +142,14 @@ function lockVault() {
   document
     .getElementById("error")
     .textContent = "";
+
+}
+
+
+/* MESSAGE */
+
+function showMessage(title, text) {
+
+  alert(title + "\n\n" + text);
 
 }
